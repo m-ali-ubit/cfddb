@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cfddb"
-version = "0.1.0"
+version = "0.1.1"
 description = "A lightweight CloudFormation parser that interprets DynamoDB table resources and applies them to DynamoDB Local"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -17,7 +17,7 @@ dependencies = [
   "boto3>=1.28",
   "pyyaml>=6.0",
   "rich>=13.0",
-  "pydantic>=2.12.5"
+  "pydantic>=2.7.1"
 ]
 keywords = ["aws", "dynamoDB", "local", "cloudformation", "parser", "yaml"]
 classifiers = [
