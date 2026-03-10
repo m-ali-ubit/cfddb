@@ -53,8 +53,9 @@ class Planner:
         existing = self.client.list_tables()
         plan = Plan()
 
+        supported_types = ["AWS::DynamoDB::Table", "AWS::DynamoDB::GlobalTable"]
         for r in resources.values():
-            if r["Type"] != "AWS::DynamoDB::Table":
+            if r["Type"] not in supported_types:
                 continue
 
             spec = DynamoTableSpec.from_cfn(r["Properties"])
