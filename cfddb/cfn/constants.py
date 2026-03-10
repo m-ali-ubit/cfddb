@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CloudFormationToken(str, Enum):
+class CloudFormationToken(StrEnum):
     REF = "Ref"
     IF = "Fn::If"
     EQUALS = "Fn::Equals"
@@ -15,7 +15,7 @@ class CloudFormationToken(str, Enum):
     GET_ATT = "Fn::GetAtt"
 
 
-class ActionType(str, Enum):
+class ActionType(StrEnum):
     CREATE = "Create"
     ADD_GSI = "Add_GSI"
     DELETE_GSI = "Delete_GSI"
